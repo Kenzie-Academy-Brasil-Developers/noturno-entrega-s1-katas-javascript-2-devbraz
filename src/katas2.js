@@ -83,7 +83,11 @@ function fibonacci(fibNum) {
 
     let result = 0
 
-    for (counter = 0; fibNum >= result; counter = add(counter, 1)) {
+    if(fibNum === 1) {
+        return 0
+    }
+
+    for (let counter = 2; fibNum > counter; counter = add(counter, 1)) {
         
         result = add(fibNum1, fibNum2)
         fibNum1 = fibNum2
@@ -91,7 +95,7 @@ function fibonacci(fibNum) {
         
     }
 
-    return result
+    return fibNum2
 
 }
 
